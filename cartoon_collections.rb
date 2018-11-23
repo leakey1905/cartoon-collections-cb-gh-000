@@ -26,3 +26,17 @@ summon_captain_planet(planeteer_calls)
 def long_planeteer_calls(planeteer_calls)
   planeteer_calls.any? { |call| call.length > 4 }
 end
+
+long_planeteer_calls(planeteer_calls)
+
+potentially_chessy_items = %[umbrella spinach cheddar helicopter]
+
+def find_the_cheese(potentially_chessy_items)
+  cheeses = %w[gouda cheddar camembert]
+
+  potentially_chessy_items.find do |maybe_cheese|
+    cheeses.include?(maybe_cheese)
+  end
+end
+
+find_the_cheese(potentially_chessy_items)
